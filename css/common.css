@@ -1,0 +1,178 @@
+@charset "utf-8";/*文字コード*/
+
+*,
+::before,/*要素の空白を残す*/
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;/*要素の幅と高さをそのまま適用*/
+}
+
+ul,
+ol {/*行頭アイコンを非表示*/
+  list-style: none;
+}
+
+a {/*リンクの文字色と下線をなくす*/
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;/*テキストのフォント指定*/
+  font-size: 16px;
+  color: #000000;
+  line-height: 1;/*文字サイズ，色，行間指定*/
+  background-color: #ffffff;/*背景色*/
+}
+
+img {/*img要素の最大値を指定，親要素を飛び出さないように*/
+  max-width: 100%;
+}
+
+.header-inner {
+  max-width: 1200px;
+  height: 110px;/*ヘッダーのサイズを指定，幅をmax-widthで指定しておくとブラウザ幅に合わせて可変する表示が出来る*/
+  margin-left: auto;
+  margin-right: auto;/*ヘッダーの位置を指定，autoはブラウザの幅から要素を幅を引いた値を左右均等に分配して余白を設けるという指定*/
+  padding-left: 40px;
+  padding-right: 40px;/*左右に40pxの余白を設ける*/
+  display: flex;/*ロゴとナビゲーションを横並びにする*/
+  justify-content: space-between;/*ロゴとナビゲーションを左右の端によせる*/
+  align-items: center;/*上下の高さを揃える*/
+}
+
+.toggle-menu-button {/*スマホ用のメニューを非表示*/
+  display: none;
+}
+
+.header-logo {
+  display: block;/*ロゴのサイズを指定できるようにする*/
+  width: 170px;/*サイズ指定*/
+}
+
+.site-menu ul {/*ナビゲーションの項目を横並びにする*/
+  display: flex;
+}
+
+.site-menu ul li {/*ナビゲーションの項目間の余白を設定する*/
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.site-menu ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.footer {
+  color: #ffffff;
+  background-color: #24211b;/*文字色と背景色を指定*/
+  padding-top: 30px;
+  padding-bottom: 15px;/*内側の上下の余白を指定する*/
+  display: flex;/*flexで横並びにする*/
+  flex-direction: column;/*縦並びに*/
+  align-items: center;/*各要素を中央に揃えて配置*/
+}
+
+.footer-logo {/*ロゴのサイズ調整，余白を調整*/
+  display: block;
+  width: 235px;
+  margin-top: 90px;
+}
+
+.footer-tel {/*電話番号のスタイルを調整*/
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 28px;
+}
+
+.footer-time {/*営業時間のスタイル調整*/
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+.copyright {/*コピーライトのスタイル調整*/
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 90px;
+}
+
+@media (max-width: 800px) {/*ナビゲーションを縦並びに変更*/
+  .site-menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .site-menu li {
+    margin-top: 20px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 50px;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    position: relative;
+  }
+
+  .header-logo {
+    width: 100px;
+  }
+
+  .header-site-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #736E62;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+  }
+
+  .header-site-menu.is-show {
+    display: block;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 44px;
+    height: 34px;
+    background-image: url(../images/common/icon-menu.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+  }
+
+  .main {
+    padding-top: 50px;
+  }
+
+  .footer-logo {
+    margin-top: 60px;
+  }
+
+  .footer-tel {
+    font-size: 20px;
+  }
+
+  .copyright {
+    margin-top: 50px;
+  }
+}
