@@ -1,6 +1,5 @@
-@charset "utf-8";/*文字コード*/
+@charset "utf-8";
 
-/*conceptページのcssを複製*/
 .title {
   height: 310px;
   background-image: url(../images/menu/bg-main.jpg);
@@ -26,17 +25,17 @@
   margin-top: 15px;
 }
 
-.item-list {/*メニューエリアの幅と配置を指定する*/
+.item-list {
   width: 930px;
   max-width: 90%;
   margin-top: 75px;
   margin-left: auto;
   margin-right: auto;
-  display: grid;/*グリッドの大枠を作成する*/
-  grid-template-columns: repeat(auto-fit, 240px);/*グリッドの列の数と幅を指定する．auto-fit幅の足りないブラウザで表示を折り返すようにする*/
-  column-gap: 95px;/*グリッドの列・行の間隔を指定する*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  column-gap: 95px;
   row-gap: 70px;
-  justify-content: center;/*アイテムの左右の揃えを指定する*/
+  justify-content: center;
 }
 
 .item-list dl {
@@ -53,12 +52,12 @@
   margin-top: 10px;
 }
 
-.item-list .time {
+.item-list .price {
   font-weight: bold;
   margin-top: 15px;
 }
 
-/*.item-list li {
+.item-list li {
   position: relative;
 }
 
@@ -70,7 +69,7 @@
   white-space: nowrap;
   transform-origin: top left;
   transform: rotate(90deg);
-}*/
+}
 
 .footer {
   margin-top: 100px;
@@ -81,4 +80,4 @@
     margin-top: 45px;
     row-gap: 40px;
   }
-}/*上部・メニューのあいだの余白を調整*/
+}
