@@ -1,0 +1,264 @@
+@charset "utf-8";/*文字コード*/
+
+/*conceptページのcssを複製*/
+.title {
+  height: 310px;
+  background-image: url(../images/menu/bg-main.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/*見出し*/
+.main h2 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+  
+.main h2::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+
+}
+
+.check{
+    width: 930px;
+    max-width: 90%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check img {
+    width: 100%;      /* 親要素に合わせる（横幅を広げる） */
+    max-width: 400px; /* 横幅の最大値 */
+    height: 600px;    /* 縦幅を固定 */
+    object-fit: fill; /* 画像を引き伸ばして全体を表示 */
+    margin-top: 25px;
+    display: block;   /* 中央揃えのための調整 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.map {
+    width: 930px;
+    max-width: 90%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+.map iframe {
+    display: block;
+    width: 100%;
+    height: 320px;
+    margin-top: 25px;
+}
+
+.cource {
+    width: 930px;
+    max-width: 90%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #f8f8f8;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+.cource h2{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 30px;
+}
+.cource h2::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    list-style: none;
+}
+
+.flex-container li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+.flex-container .time {
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+.flex-container dl {
+    margin-bottom: 20px;
+}
+
+.flex-container dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.flex-container dd {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.flex-container li:first-child{
+    margin-left: 0;
+}
+
+.flex-container img {
+    margin-bottom: 20px;
+    width:260px;
+}
+
+/*
+.cource{
+    width: 930px;
+    max-width: 90%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #f8f8f8;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+.cource h2{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 60px;
+}
+.cource h2::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 20px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.flex-container dl{
+    margin-bottom: 20px;
+}
+.flex-container dt{
+    font-weight: bold;
+}
+.flex-container dd{
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.flex-container li:first-child{
+    margin-left: 0;
+}
+.flex-container img{
+    margin-bottom: 20px;
+    width:260px;
+}*/
+
+.total-time {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.total-time p {
+    margin: 5px 0;
+}
+
+.link-button-area{
+    text-align: center;
+    margin-top: 40px;
+}
+.link-button{
+    background-color: #f4dd64;
+    display: inline-block;
+    min-width: 180px;
+    line-height: 48px;
+    border-radius: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:16px;
+    font-weight: bold;
+}
+
+.link-button:hover {
+  background-color: #d8b500;
+}
+
+/*フッター*/
+.footer {
+    margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+    .flex-container li {
+        flex-direction: column; /* スマホ表示で文字の下に画像が来るように設定 */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .flex-container dl {
+        width: 100%; /* テキスト部分の幅を100%に */
+    }
+
+    .flex-container img {
+        width: 100%; /* 画像の幅を100%に調整 */
+        max-width: 260px; /* 画像の最大幅を設定 */
+        margin-top: 15px; /* 文字と画像間のスペース */
+        margin-bottom: 20px;
+        align-self: center; /* 画像を中央寄せ */
+    }
+    .check img {
+        width: 100%;    /* 親要素に合わせる */
+        max-width: 200px; /* 画像の最大幅 */
+        height: auto;   /* アスペクト比を維持 */
+        margin-top: 25px;
+        align-self: center; /* 画像を中央寄せ */
+    }
+}

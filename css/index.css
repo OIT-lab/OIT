@@ -1,107 +1,42 @@
-@charset "utf-8";
+@charset "utf-8";/*文字コード*/
 
-.first-view {
-  height: calc(100vh - 110px);
-  background-image: url(../images/index/bg-main.jpg);
+/*conceptページのcssを複製*/
+.title {
+  height: 310px;
+  background-image: url(../images/menu/bg-main.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.first-view-text {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 40px;
-  padding-bottom: 80px;
   color: #ffffff;
-  font-weight: bold;
   text-shadow: 1px 1px 10px #4b2c14;
 }
 
-.first-view-text h1 {
+.title h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 56px;
-  line-height: 72px;
-}
-
-.first-view-text p {
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-.lead {
-  max-width: 1200px;
-  margin: 60px auto;
-}
-
-.lead p {
-  line-height: 2;
-  text-align: center;
-}
-
-.link-button-area {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.link-button {
-  background-color: #f4dd64;
-  display: inline-block;
-  min-width: 180px;
-  line-height: 48px;
-  border-radius: 24px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-}
-
-.link-button:hover {
-  background-color: #d8b500;
-}
-
-.recommended {
-  background-color: #f8f8f8;
-  padding-top: 45px;
-  padding-bottom: 55px;
-}
-
-.recommended h2 {
-  font-size: 22px;
+  font-size: 32px;
   font-weight: bold;
-  text-align: center;
 }
 
-.recommended h2::after {
-  content: '';
-  display: block;
-  width: 36px;
-  height: 3px;
-  background-color: #000000;
-  margin-top: 20px;
+.title p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.item-list {/*メニューエリアの幅と配置を指定する*/
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.item-list {
-  display: flex;
-  padding-top: 40px;
-  padding-bottom: 10px;
-  padding-left: 60px;
-  padding-right: 60px;
-  overflow: scroll;
-}
-
-.item-list li {
-  flex-shrink: 0;
-  width: 260px;
-  margin-left: 75px;
-}
-
-.item-list li:first-child {
-  margin-left: 0;
+  display: grid;/*グリッドの大枠を作成する*/
+  grid-template-columns: repeat(auto-fit, 240px);/*グリッドの列の数と幅を指定する．auto-fit幅の足りないブラウザで表示を折り返すようにする*/
+  column-gap: 95px;/*グリッドの列・行の間隔を指定する*/
+  row-gap: 70px;
+  justify-content: center;/*アイテムの左右の揃えを指定する*/
 }
 
 .item-list dl {
@@ -118,49 +53,37 @@
   margin-top: 10px;
 }
 
-.item-list .price {
-  font-weight: bold;
+.item-list .time {
+  /*font-weight: bold;*/
   margin-top: 15px;
 }
 
-@media (max-width: 800px) {
-  .first-view {
-    height: calc(100vh - 50px);
-    background-image: url(../images/index/bg-main-sp.jpg);
-    align-items: flex-start;
-  }
-
-  .first-view-text {
-    padding-top: 60px;
-    padding-left: 20px;
-  }
-
-  .first-view-text h1 {
-    font-size: 36px;
-    line-height: 48px;
-  }
-
-  .first-view-text p {
-    font-size: 14px;
-    margin-top: 15px;
-  }
-
-  .lead {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .lead p {
-    text-align: left;
-  }
-
-  .item-list {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .item-list li {
-    width: 220px;
-    margin-left: 30px;
-  }
+.blue-link{
+  font-weight: bold;
+  color: #2E8B57;
 }
+
+/*.item-list li {
+  position: relative;
+}
+
+.item-list .item-label {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 18px);
+  font-size: 10px;
+  white-space: nowrap;
+  transform-origin: top left;
+  transform: rotate(90deg);
+}*/
+
+.footer {
+  margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+  .item-list {
+    margin-top: 45px;
+    row-gap: 40px;
+  }
+}/*上部・メニューのあいだの余白を調整*/
